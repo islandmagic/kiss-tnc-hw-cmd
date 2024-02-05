@@ -6,8 +6,11 @@ In the definition of the [KISS TNC protocol](https://www.ax25.net/kiss.aspx), co
 
 |Command|Function|Device|Parameter|Returns|
 |---|---|---|---|---|
-|0xEA|Set Frequency|[^1][^4]|32 bit frequency in Hz. MSB first|NA|
-|0xEB|Restore Frequency|[^1][^4]|NA|NA|
+|0x28|Get Firmware Version|[^2] [^3] [^4]|NA|Version as a string|
+|0x7B|Get API Version|[^2] [^3] [^4]|NA|Version as uint16|
+|0x7E|Get Capabilities|[^2] [^3] [^4]|NA|Capabilities bit-field as uint16|
+|0xEA|Set Frequency|[^1] [^4]|32 bit frequency in Hz. MSB first|NA|
+|0xEB|Restore Frequency|[^1] [^4]|NA|NA|
 ||Too many to list|[^2] [^3]|||
 
 [^1]: [PicoAPRS](http://www.db1nto.de/)
